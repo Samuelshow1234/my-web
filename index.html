@@ -8,18 +8,29 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="showProducts('phones')">
   <header>
-    <h1>Welcome to SamuelshowTech_Exchange 001</h1>
-    <!-- Navigation links -->
+    <h1>Welcome to SamuelshowTech_Exchange</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+    <div id="cart-summary">
+      <a href="checkout.html">
+        <span id="cart-count">0</span> item(s) in Cart
+      </a>
+    </div>
   </header>
   
   <section id="categories">
     <h2>Categories</h2>
     <ul>
-      <li><button onclick="showProducts('phones')">Phones</button></li>
-      <li><button onclick="showProducts('laptops')">Laptops</button></li>
-      <li><button onclick="showProducts('accessories')">Accessories</button></li>
+      <li><a href="#" onclick="showProducts('phones')">Phones</a></li>
+      <li><a href="#" onclick="showProducts('laptops')">Laptops</a></li>
+      <li><a href="#" onclick="showProducts('accessories')">Accessories</a></li>
     </ul>
   </section>
 
@@ -32,5 +43,6 @@
     <p>My Phone Number</p>
     <p>&copy; 2024 SamuelshowTech_Exchange</p>
   </footer>
+
 </body>
 </html>

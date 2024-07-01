@@ -8,16 +8,29 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="loadCartAndCalculateTotal()">
   <header>
     <h1>Checkout</h1>
-    <!-- Navigation links -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div id="cart-summary">
+      <a href="checkout.html">
+        <span id="cart-count">0</span> item(s) in Cart
+      </a>
+    </div>
   </header>
   
   <section id="order-details">
     <h2>Your Order</h2>
     <div id="order-summary">
-      <!-- Order summary will be populated dynamically -->
+      <ul id="cart-items">
+        <!-- Cart items will be displayed dynamically here -->
+      </ul>
+      <p>Total: <span id="total-amount">$0.00</span></p>
     </div>
     
     <form id="order-form">
@@ -45,11 +58,11 @@
     </form>
   </section>
 
-  <!-- Footer content added within the page -->
   <footer>
     <p>My Location</p>
     <p>My Phone Number</p>
     <p>&copy; 2024 SamuelshowTech_Exchange</p>
   </footer>
+
 </body>
 </html>
